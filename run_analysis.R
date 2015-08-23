@@ -49,7 +49,7 @@ data <- cbind(subject, y, xFiltered)
 # with the average of each variable for each activity and each subject
 
 ## Collecting averages.
-result <- aggregate(x=data, by=list(id = data$person_id, activites = data$activity), FUN=mean)
+result <- aggregate(x=data, by=list(id = data$person_id, activities = data$activity), FUN=mean)
 result <- result[, !(colnames(result) %in% c("person_id", "activity"))]
 
 ## Writing results.

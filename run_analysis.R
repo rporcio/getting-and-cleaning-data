@@ -53,6 +53,6 @@ result <- aggregate(x=data, by=list(id = data$person_id, activities = data$activ
 result <- result[, !(colnames(result) %in% c("person_id", "activity"))]
 
 ## Writing results.
-write.table(result, './tidy_data.txt', row.names = F)
+write.table(result, './tidy_data.txt', row.names = FALSE)
 
 print("Finished analysis.")
